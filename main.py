@@ -3,7 +3,7 @@ import sys
 import random
 
 pygame.init()
-screen = pygame.display.set_mode((1280, 720))
+screen = pygame.display.set_mode((1280, 700))
 clock = pygame.time.Clock()
 pygame.display.set_caption("Dino Game")
 
@@ -52,7 +52,7 @@ class Dino(pygame.sprite.Sprite):
     def jump(self):
         jump_sfx.play()
         if self.rect.centery >= 360:
-            while self.rect.centery - self.velocity > 40:
+            while self.rect.centery - self.velocity > 10:
                 self.rect.centery -= 1
 
     def duck(self):
@@ -130,7 +130,7 @@ class Ptero(pygame.sprite.Sprite):
 # Variables
 
 
-game_speed = 5
+game_speed = 4
 jump_count = 10
 player_score = 0
 game_over = False
